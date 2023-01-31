@@ -33,5 +33,5 @@ jobs:
       run: |
         aws elasticbeanstalk create-application-version --application-name teststatic --version-label exo-cloud-db-1.0.0 --source-bundle S3Bucket=myawscompartimentwinnie,S3Key=application.zip
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_ACCESS_KEY_ID: ${secrets.AWS_ACCESS_KEY_ID}
+        AWS_SECRET_ACCESS_KEY: ${secrets.AWS_SECRET_ACCESS_KEY}
